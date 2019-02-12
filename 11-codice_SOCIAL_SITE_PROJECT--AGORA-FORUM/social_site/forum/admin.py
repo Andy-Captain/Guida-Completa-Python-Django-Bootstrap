@@ -8,11 +8,13 @@ class DiscussioneModelAdmin(admin.ModelAdmin):
     search_fields = ["titolo", "autore_discussione"]
     list_filter = ["sezione_appartenenza", "data_creazione"]
 
+
 class PostModelAdmin(admin.ModelAdmin):
     model = Post
     list_display = ["autore_post", "discussione"]
     search_fields = ["contenuto"]
     list_filter = ["data_creazione", "autore_post"]
+
 
 class SezioneModelAdmin(admin.ModelAdmin):
     model = Sezione

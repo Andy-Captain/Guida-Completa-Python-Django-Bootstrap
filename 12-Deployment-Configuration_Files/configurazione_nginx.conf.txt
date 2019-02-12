@@ -1,0 +1,33 @@
+upstream NOME-PROGETTO_server {
+  server unix:/home/NOME-UTENTE/NOME-AMBIENTE-VIRTUALE/run/gunicorn.sock fail_timeout=0;
+}
+
+server {
+
+    listen 80;
+    server_name INDIRIZZO_IP_DROPLET;
+
+    client_max_body_size 4G;
+    access_log /home/NOME-UTENTE/logs/nginx-access.log;
+    error_log /home/NOME-UTENTE/logs/nginx-error.log;
+
+    location /static/ {
+        alias   /home/NOME-UTENTE/static-serve/;
+    }
+
+    location /media/ {
+        alias   /home/NOME-UTENTE/media-serve/;
+    }
+
+    location / {
+
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header Host $http_host;
+        proxy_redirect off;
+        if (!-f $request_filename) {
+            proxy_pass http://NOME-PROGETTO_server;
+            break;
+        }
+    }
+
+}
