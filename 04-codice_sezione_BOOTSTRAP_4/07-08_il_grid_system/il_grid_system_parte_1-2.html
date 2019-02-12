@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style media="screen">
+        .mycol {
+            border: 0.5px solid black;
+            text-align: center;
+        }
+    </style>
+
+    <title>Bootstrap 4: Il Grid System</title>
+  </head>
+  <body>
+    <h1 style="text-align: center;">Bootstrap 4: Il Grid System</h1>
+
+    <div class="container">
+        <h2>Sistema a Griglia - 12 Colonne</h2>
+        <div class="row">
+            <div class="col-1 mycol">
+                1
+            </div>
+            <div class="col-1 mycol">
+                2
+            </div>
+            <div class="col-1 mycol">
+                3
+            </div>
+            <div class="col-1 mycol">
+                4
+            </div>
+            <div class="col-1 mycol">
+                5
+            </div>
+            <div class="col-1 mycol">
+                6
+            </div>
+            <div class="col-1 mycol">
+                7
+            </div>
+            <div class="col-1 mycol">
+                8
+            </div>
+            <div class="col-1 mycol">
+                9
+            </div>
+            <div class="col-1 mycol">
+                10
+            </div>
+            <div class="col-1 mycol">
+                11
+            </div>
+            <div class="col-1 mycol">
+                12
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5 mycol">
+                Colonna Small 5x1 - (col-sm-5 ≥576px)
+            </div>
+            <div class="col-sm-2 mycol">
+                Colonna Small 2x1 - (col-sm-2 ≥576px)
+            </div>
+            <div class="col-sm-5 mycol">
+                Colonna Small 5x1 - (col-sm-5 ≥576px)
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mycol">
+                Colonna Medium 4x1 - (col-md-4 ≥768px)
+            </div>
+            <div class="col-md-4 mycol">
+                Colonna Medium 4x1 - (col-md-4 ≥768px)
+            </div>
+            <div class="col-md-4 mycol">
+                Colonna Medium 4x1 - (col-md-4 ≥768px)
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mycol">
+                Colonna Large 6x1 - (col-lg-6 ≥992px)
+            </div>
+            <div class="col-lg-6 mycol">
+                Colonna Large 6x1 - (col-lg-6 ≥992px)
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-md-4 mycol">
+                Colonna Extra Large 6x1 - (col-xl-6 ≥1200px)
+            </div>
+            <div class="col-xl-6 col-md-4 mycol">
+                Colonna Extra Large 6x1 - (col-xl-6 ≥1200px)
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h2>Colonne Annidate</h2>
+        <div class="row">
+            <div class="col-md-6 mycol">
+                uno
+            </div>
+            <div class="col-md-6 mycol">
+                <div class="row">
+                    <div class="col-6 mycol">
+                        due 1/2 - col-6
+                    </div>
+                    <div class="col-6 mycol">
+                        due 2/2 - col-6
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h2>Allineamento</h2>
+        <div class="row justify-content-around">
+            <div class="col-lg-4 col-sm-5 mycol">
+                colonna uno
+            </div>
+            <div class="col-lg-4 col-sm-5 mycol">
+                colonna due
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h2>Ordinamento</h2>
+        <div class="row">
+            <div style="background-color:orange;" class="col-sm-4 mycol order-3">
+                prima
+            </div>
+            <div style="background-color:pink;" class="col-sm-4 mycol order-1">
+                due
+            </div>
+            <div style="background-color:green;" class="col-sm-4 mycol order-2">
+                tre
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="container">
+      <div class="row" style="height:500px; background-color: red;">
+        <div class="col align-self-start">
+          One of three columns
+        </div>
+        <div class="col align-self-center">
+          One of three columns
+        </div>
+        <div class="col align-self-end">
+          One of three columns
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
