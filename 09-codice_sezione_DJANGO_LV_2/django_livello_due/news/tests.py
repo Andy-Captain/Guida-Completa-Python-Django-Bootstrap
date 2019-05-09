@@ -37,7 +37,7 @@ class GiornalistaTestCase(TestCase):
     """ una prima serie di test per verificare la corretta implementazione del metodo Giornalista """
 
     def setUp(self):
-         """ grazie a setUp, ciascun metodo viene testato con dati creati appositmente per il test """
+        """ grazie a setUp, ciascun metodo viene testato con dati creati appositmente per il test """
         Giornalista.objects.create(nome="Guido", cognome="van Rossum")
 
     def test_giornalista_str(self):
